@@ -21,11 +21,6 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-
-# @app.get("/{flight_instance_no}/view_seat_map" , tags=["Booking"])
-# def view_seat_map(flight_instance_no):
-#     return controller.get_seat_data(flight_instance_no)
-
 @app.post("/main")
 def get_data(dto:dto_user_input):
     try:
@@ -34,11 +29,3 @@ def get_data(dto:dto_user_input):
         return output
     except:
         return "Invalid input"
-
-# @app.put("/{user_id}/payment_method/pay_by_mobile_banking", tags=["Payment"])
-# def pay_by_mobile_banking(user_id, booking_id, bank_account_info:bank_account_info):
-#     Booking_details = controller.booking_details(user_id, booking_id)
-#     payment = controller.pay(user_id, booking_id, Booking_details, 1, bank_account_info)
-#     if payment:
-#         return "mobilebanking payment is successful"
-
