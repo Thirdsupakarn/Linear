@@ -83,9 +83,6 @@ def main(inp):
     similarities.sort(key=lambda x: x[1], reverse=True)
     
     # Output results
-    # print("\nCosine Similarity with Programs:")
-    # for program, similarity in similarities:
-    #     print(f"{program}: {similarity:.4f}")
     return similarities
 
-# Run the main function
+
