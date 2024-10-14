@@ -78,14 +78,8 @@ def main(inp):
     for program, skill_scores in programs_data:
         similarity = cosine_similarity(user_vector, skill_scores)
         similarities.append((program, similarity))
-    
-    # Sort programs by highest similarity
-    similarities.sort(key=lambda x: x[1], reverse=True)
-    
+
     # Output results
-    # print("\nCosine Similarity with Programs:")
-    # for program, similarity in similarities:
-    #     print(f"{program}: {similarity:.4f}")
-    return similarities
+    return dict(sorted(similarities, key=lambda x: x[1], reverse=True))
 
 # Run the main function
