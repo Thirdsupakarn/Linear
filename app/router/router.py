@@ -4,7 +4,7 @@ from ..models.model import *
 from ..app import *
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Linear Gu ja bra")
+app = FastAPI(title="Linear")
 
 origins = [
     "http://localhost:5173",
